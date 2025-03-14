@@ -75,7 +75,15 @@
             cursor: pointer;
             font-size: 16px;
             transition: background-color 0.3s ease;
-            margin-top: 10px;
+            margin-left: 10px;
+            /* 新增样式，使其与输入框在同一行 */
+            width: calc(30% - 10px);
+        }
+
+        /* 验证码输入框样式调整，使其与按钮在同一行 */
+        #captcha {
+            width: 70%;
+            display: inline-block;
         }
 
         /* 获取验证码按钮悬停样式 */
@@ -109,7 +117,9 @@
         <form>
             <div class="form-group">
                 <label for="phone">手机号</label>
-                <input type="tel" id="phone" placeholder="请输入手机号" pattern="[0-9]{11}" required>
+                <input type="tel" id="phone" placeholder="请输入手机号" pattern="[0-9]{11}" required
+                    oninvalid="this.setCustomValidity('请输入11位数字的手机号')"
+                    oninput="this.setCustomValidity('')">
             </div>
             <div class="form-group">
                 <label for="captcha">验证码</label>

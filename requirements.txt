@@ -2,3 +2,4 @@
 python-dotenv
 flask
 flask-sqlalchemy  # 如果使用数据库
+psycopg2
