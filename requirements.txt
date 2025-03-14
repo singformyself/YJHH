@@ -1,0 +1,4 @@
+# 列出项目的依赖库，使用 pip install -r requirements.txt 可以快速安装这些依赖。
+python-dotenv
+flask
+flask-sqlalchemy  # 如果使用数据库
